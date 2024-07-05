@@ -4,7 +4,8 @@ Este es un proyecto [Next.js](https://nextjs.org/) inicializado con [`create-nex
 
 ## Instalación y Ejecución
 
-```npm i
+```
+npm i
 ```
 
 Primero, ejecuta el servidor de desarrollo:
