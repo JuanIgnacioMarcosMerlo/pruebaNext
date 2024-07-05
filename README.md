@@ -4,6 +4,9 @@ Este es un proyecto [Next.js](https://nextjs.org/) inicializado con [`create-nex
 
 ## Instalación y Ejecución
 
+```npm i
+```
+
 Primero, ejecuta el servidor de desarrollo:
 
 ```bash
@@ -15,11 +18,13 @@ pnpm dev
 # o
 bun dev
 
+
 Abre http://localhost:3000 en tu navegador para ver el resultado.
 
 Puedes comenzar a editar la página modificando app/page.js. La página se actualiza automáticamente a medida que editas el archivo.
 
 Este proyecto utiliza next/font para optimizar y cargar automáticamente Inter, una fuente personalizada de Google.
+```
 
 Estructura del Proyecto
 El proyecto está estructurado de la siguiente manera:
