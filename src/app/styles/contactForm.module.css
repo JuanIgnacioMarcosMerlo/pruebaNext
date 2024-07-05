@@ -1,0 +1,90 @@
+.container{
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+.contact {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.title {
+
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .inputField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+    text-align: left;
+  }
+  
+.input {
+    background-color: #f5f5f5;
+    padding: 0.5em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .input:focus {
+    transition: 0.5s all;
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #333;
+  }
+  
+  input.errorInput, textarea.errorInput {
+    border-color: red;
+  }
+  
+  .enviar {
+    margin-top: 15px;
+    width: 10em;
+    padding: 0.5em 0.8em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+  }
+  
+  .enviar:hover {
+    background-color: white;
+    color: #333;
+    border: 1px solid #333;
+  }
+  
+  .success {
+    color: green;
+    margin-top: 1em;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  

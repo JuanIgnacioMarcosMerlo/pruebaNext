@@ -1,0 +1,22 @@
+.about {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+.titulo {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+.description {
+  padding: 1em;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    text-align-last: center;
+    word-spacing: 0.1em;
+  }
+  

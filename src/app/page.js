@@ -1,95 +1,30 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Head from 'next/head';
+import Header from './components/Header';
+import About from './components/About';
+import Interests from './components/Interests';
+import ContactForm from './components/ContactForm';
 
-export default function Home() {
+const Home = () => {
+  const user = {
+    name: 'Juan Ignacio Marcos Merlo',
+    description: 'Desarrollador web apasionado por la tecnología y el diseño. Con experiencia en React, Next.js y desarrollo full-stack, siempre busco aprender y mejorar mis habilidades. Me encanta trabajar en proyectos desafiantes y colaborar con otros para crear aplicaciones innovadoras. Tengo un profundo interés en las nuevas tecnologías y en cómo pueden ser utilizadas para resolver problemas complejos y mejorar la vida de las personas. Además, disfruto compartir mis conocimientos a través de charlas y talleres, y siempre estoy dispuesto a aprender de otros. En mi tiempo libre, me gusta explorar el mundo del diseño gráfico, jugar videojuegos y leer libros sobre ciencia ficción y fantasía. Estoy comprometido con el desarrollo de soluciones eficientes y elegantes, y creo firmemente en la importancia de una buena experiencia de usuario. Aspiro a seguir creciendo profesionalmente y contribuir a proyectos que tengan un impacto positivo en la sociedad.',
+    interests: ['Desarrollo web', 'Diseño de interfaz', 'Tecnología', 'Música', 'Viajes', 'Deportes'],
+  };
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div>
+      <Head>
+        <title>Portafolio de {user.name}</title>
+        <meta name="description" content={`Portafolio personal de ${user.name}`} />
+      </Head>
+      <Header name={user.name} />
+      <main>
+        <About description={user.description} />
+        <Interests interests={user.interests} />
+        <ContactForm />
+      </main>
+    </div>
   );
-}
+};
+
+export default Home;
